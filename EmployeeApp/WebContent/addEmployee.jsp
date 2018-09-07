@@ -10,15 +10,16 @@
 	<h1>Add New Employee</h1>
 	<hr>
 	<form action="addEmployee" method="post">
+	<br><br><br>
 		<label> Employee Id: </label> 
 		<input type="number" name="empId" required /> 
-		<br> 
+		<br> <br>
 		<label>Employee Name: </label> 
 		<input type="text" name="empName" size="15" required /> 
-		<br> 
+		<br> <br>
 		<label> Employee Salary: </label> 
 		<input type="number" name="empSalary" size="15" required /> 
-		<br> 
+		<br> <br>
 		<label>Employee Department: </label> 
 		<select name="empDept" required>
 			<option value="IT">IT</option>
@@ -26,6 +27,7 @@
 			<option value="ADMIN">ADMIN</option>
 			<option value="ACCOUNTS">ACCOUNTS</option>
 		</select>
+		<br><br><br>
 		<input type="submit" value="Add Employee"/>
 	</form>
 </body>
