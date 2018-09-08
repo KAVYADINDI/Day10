@@ -43,14 +43,24 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public boolean addEmployee(Employee employee) {
+//		for (Employee emp : employees) {
+//			if (emp.getEmployeeId() == employee.getEmployeeId()) {
+//				return false;
+//			}
+//		}
 		return employees.add(employee);
 	}
 
 	@Override
 	public Employee updateEmployee(Employee employee) {
-
-		
-		
+		for (Employee emp : employees) {
+			if (emp.getEmployeeId() == employee.getEmployeeId()) {
+				emp.setEmployeeName(employee.getEmployeeName());
+				emp.setEmployeeSalary(employee.getEmployeeSalary());
+				emp.setEmployeeDepartment(employee.getEmployeeDepartment());
+			}
+			return emp;
+		}
 		return null;
 	}
 

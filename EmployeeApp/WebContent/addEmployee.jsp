@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>New Employee Page</title>
 </head>
-<body bgcolor="Cyan">
+<body bgcolor="Bisque" style="text-align:center" >
 	<h1>Add New Employee</h1>
 	<hr>
 	<form action="addEmployee" method="post">
@@ -22,6 +22,7 @@
 		<br> <br>
 		<label>Employee Department: </label> 
 		<select name="empDept" required>
+		<option value="">--Select--</option>
 			<option value="IT">IT</option>
 			<option value="HR">HR</option>
 			<option value="ADMIN">ADMIN</option>

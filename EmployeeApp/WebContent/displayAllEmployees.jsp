@@ -9,10 +9,9 @@
 <meta charset="ISO-8859-1">
 <title>All Employee Details</title>
 </head>
-<body>
+<body bgcolor="Bisque" style="text-align:center">
 	<h1>Employee Details</h1>
 	<hr><br><br>
-	
 	<table border="1">
 		<tr>
 			<th>Employee Id</th>
@@ -28,11 +27,12 @@
 			<td>${employee.employeeName}</td>
 			<td>${employee.employeeSalary}</td>
 			<td>${employee.employeeDepartment}</td>
-			<td><a href="">edit</a></td>
-			<td><a href="">delete</a></td>
+			<td><a href="updateEmployee?Id=${employee.employeeId}">edit</a></td>
+			<td><a href="deleteEmployee?Id=${employee.employeeId}">delete</a></td>
 		</tr>
 		</c:forEach>
 	</table>
-	<a href="addEmployee.jsp"></a>
+	<br>
+	<a href="addEmployee.jsp">Add another Employee</a>
 </body>
 </html>
