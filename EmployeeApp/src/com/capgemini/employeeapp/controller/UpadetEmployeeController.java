@@ -32,12 +32,12 @@ public class UpadetEmployeeController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html");
+//		response.setContentType("text/html");
 		RequestDispatcher dispatcher = null;
 		String id = request.getParameter("Id");
 		employeeDao = (EmployeeDao) context.getAttribute("employeeDao");
 		Employee employee = employeeDao.findEmployeeByID(Integer.parseInt(id));
-		context.setAttribute("employee", employee);
+		request.setAttribute("employee", employee);
 
 		dispatcher = request.getRequestDispatcher("updateEmployeeDetails.jsp");
 		dispatcher.forward(request, response);
@@ -56,13 +56,13 @@ public class UpadetEmployeeController extends HttpServlet {
 		String empDept = request.getParameter("empDept");
 
 		Employee employee = new Employee(empId, empName, empSalary, empDept);
-		context.setAttribute("employeeDao", employeeDao);
+	context.setAttribute("employeeDao", employeeDao);
 		
 		RequestDispatcher dispatcher = null;
 		
 		if(employeeDao.updateEmployee(employee) != null)
 		{
-			response.sendRedirect("getAllEmployees");
+			response.sendRedirect("getAllEmployees.do");
 		}
 		else
 		{

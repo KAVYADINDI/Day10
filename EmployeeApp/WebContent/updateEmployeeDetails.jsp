@@ -13,7 +13,7 @@
 <form action="updateEmployee" method="post">
 	<br><br><br>
 		<label> Employee Id: </label>
-		<input type="text" value="${employee.employeeId }" name="empId" readonly>
+		<input type="text" value="${employee.employeeId}" name="empId" readonly>
 		<br> <br>
 		<label>Employee Name: </label> 
 		<input type="text" name="empName" placeholder="${employee.employeeName}" size="15" required /> 

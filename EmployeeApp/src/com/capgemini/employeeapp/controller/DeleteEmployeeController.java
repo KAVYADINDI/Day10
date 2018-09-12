@@ -39,7 +39,7 @@ public class DeleteEmployeeController extends HttpServlet {
 		System.out.println(id);
 		 
 		if (employeeDao.deleteEmployee(Integer.parseInt(id))){
-			response.sendRedirect("getAllEmployees");			
+			response.sendRedirect("getAllEmployees.do");			
 		} else {
 			dispatcher = request.getRequestDispatcher("error.jsp");
 			dispatcher.forward(request, response);

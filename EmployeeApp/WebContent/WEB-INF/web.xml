@@ -3,6 +3,5 @@
   <display-name>EmployeeApp</display-name>
   <welcome-file-list>
     <welcome-file>EmployeeAppHomePage.jsp</welcome-file>
-    
   </welcome-file-list>
 </web-app>

@@ -13,7 +13,7 @@ import com.capgemini.employeeapp.dao.EmployeeDao;
 import com.capgemini.employeeapp.dao.impl.EmployeeDaoImpl;
 import com.capgemini.employeeapp.model.Employee;
 
-@WebServlet("/addEmployee")
+@WebServlet("/addEmployee.do")
 public class AddEmployeeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private EmployeeDao employeeDao;
@@ -50,7 +50,7 @@ public class AddEmployeeController extends HttpServlet {
 			 * h1 tag in the body) dispatcher=request.getRequestDispatcher("success.jsp");
 			 * dispatcher.forward(request,response);
 			 */
-			response.sendRedirect("getAllEmployees");
+			response.sendRedirect("getAllEmployees.do");
 		} else {
 			dispatcher = request.getRequestDispatcher("error.jsp");
 			dispatcher.forward(request, response);
